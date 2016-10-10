@@ -8,7 +8,7 @@ import (
 
 /*
     练习 7.1： 使用来自ByteCounter的思路， 实现一个针对对单词和行数的计数器。 你会发现
-    bufio.ScanWords非常的有用。
+    bufio.ScanWords非常的有用。(本解答不使用bufio.ScanWords,从执行效率来说真的不好用)
  */
 
 const (
