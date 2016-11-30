@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+    "fmt"
     "io/ioutil"
     //"bufio"
 )
@@ -12,8 +12,9 @@ import (
  */
 
 const (
-   INIT_STATE, SPACE_COMMA_STATE, CHAR_STATE = "INIT_STATE", "SPACE_COMMA", "CHAR_STATE"
+    INIT_STATE, SPACE_COMMA_STATE, CHAR_STATE = "INIT_STATE", "SPACE_COMMA", "CHAR_STATE"
 )
+
 func CountWordsLines(b []byte) (int, int) {
     // 统计单词数,每个单词默认以空格,或逗号分隔
     s := string(b[:])
@@ -21,11 +22,11 @@ func CountWordsLines(b []byte) (int, int) {
     words := 0
     lines := 9
     state := INIT_STATE
-    for i:=0; i<len(r)-1; {
+    for i := 0; i < len(r) - 1; {
         switch state {
         case INIT_STATE:
             i++
-            if r[i] == ' ' || r[i] == ','  || r[i] == '.' {
+            if r[i] == ' ' || r[i] == ',' || r[i] == '.' {
                 state = SPACE_COMMA_STATE
             } else {
                 state = CHAR_STATE
@@ -36,7 +37,7 @@ func CountWordsLines(b []byte) (int, int) {
             }
         case SPACE_COMMA_STATE:
             i++
-            if r[i] == ' ' || r[i] == ','  || r[i] == '.' {
+            if r[i] == ' ' || r[i] == ',' || r[i] == '.' {
                 state = SPACE_COMMA_STATE
             } else {
                 words++
@@ -47,7 +48,7 @@ func CountWordsLines(b []byte) (int, int) {
             }
         case CHAR_STATE:
             i++
-            if r[i] == ' ' || r[i] == ','  || r[i] == '.' {
+            if r[i] == ' ' || r[i] == ',' || r[i] == '.' {
                 state = SPACE_COMMA_STATE
             } else {
                 state = CHAR_STATE
@@ -60,8 +61,8 @@ func CountWordsLines(b []byte) (int, int) {
     return words, lines
 }
 func main() {
-    fcontent, _:= ioutil.ReadFile("./testfile.txt")
-    words, lines:= CountWordsLines(fcontent)
+    fcontent, _ := ioutil.ReadFile("./testfile.txt")
+    words, lines := CountWordsLines(fcontent)
     fmt.Println(words, lines)
 
 }

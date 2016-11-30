@@ -16,6 +16,7 @@ type NewIOWriter struct {
     bytenums int
 }
 
+
 func (iw *NewIOWriter) Write (b []byte) (int, error) {
     iw.bytenums = len(b)
     return iw.bytenums, nil
