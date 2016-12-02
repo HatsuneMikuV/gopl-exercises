@@ -18,9 +18,25 @@ func wordCounter(reader io.Reader) int {
             count += 1
         } else {
             err := scanner.Err()
-            if err == nil {
-                log.Println("Finish count words.")
-            } else {
+            if err != nil {
+                log.Fatal(err)
+            }
+            return count
+        }
+    }
+}
+
+func lineCounter(reader io.Reader) int {
+    scanner := bufio.NewScanner(reader)
+    scanner.Split(bufio.ScanLines)
+    var count = 0
+    for {
+        token := scanner.Scan()
+        if token {
+            count += 1
+        } else {
+            err := scanner.Err()
+            if err != nil {
                 log.Fatal(err)
             }
             return count
@@ -33,5 +49,12 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    fmt.Printf("The reader has %d words\n", wordCounter(file))
+    defer file.Close()
+    fmt.Printf("The reader has %d word(s)\n", wordCounter(file))
+    _, err = file.Seek(0, 0)
+    if err != nil {
+        log.Fatal(err)
+    }
+    fmt.Printf("The reader has %d line(s)\n", lineCounter(file))
+
 }
