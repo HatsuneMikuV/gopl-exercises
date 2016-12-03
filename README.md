@@ -20,6 +20,8 @@ Go语言圣经书中习题
 
   - [ ] 7.6 **[bug]** Could not print °C (无法打印°C)
 
+  - [x] 7.7
+
 
 - Ch 8
 
