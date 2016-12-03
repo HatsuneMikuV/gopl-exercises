@@ -50,7 +50,7 @@ func (f *celsiusFlag) Set(s string) error {
 }
 
 func (f *Celsius) String() string {
-    return fmt.Sprintf("%g°C", *f)
+    return fmt.Sprintf("%s°C", *f)
 }
 
 func CelsiusFlag(name string, value Celsius, usage string) *Celsius {
