@@ -6,7 +6,7 @@ Go语言圣经书中习题
 
 ## Progress 进度
 
-- ch7
+- Ch7
 
   - [x] 7.1
 
@@ -18,10 +18,10 @@ Go语言圣经书中习题
 
   - [ ] 7.5
 
-  - [x] 7.6 **[bug]** Could not print °C (无法打印°C)
+  - [ ] 7.6 **[bug]** Could not print °C (无法打印°C)
 
 
-- ch8
+- Ch 8
 
   - [ ] 8.1 **[bug]** Exercise 8.1 can not get a correct time at each location
             (8.1中无法正常转换各个时区的时间)
