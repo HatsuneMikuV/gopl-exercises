@@ -72,6 +72,9 @@ func main() {
     sort.Sort(byArtist(tracks))
     printTrack()
 
+    sort.Sort(sort.Reverse(byArtist(tracks)))
+    printTrack()
+
     sort.Sort(customSort{tracks, func(x, y *Track) bool {
         if x.Title != y.Title {
             return x.Title < y.Title
