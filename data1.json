@@ -1,0 +1,99 @@
+{
+  "Process": [
+    {
+      "name": "p0",
+      "resourceA": {
+        "Max": 7,
+        "Allocation": 0,
+        "Need": 7
+      },
+      "resourceB": {
+        "Max": 5,
+        "Allocation": 1,
+        "Need": 4
+      },
+      "resourceC": {
+        "Max": 3,
+        "Allocation": 0,
+        "Need": 3
+      }
+    },
+    {
+      "name": "p1",
+      "resourceA": {
+        "Max": 3,
+        "Allocation": 2,
+        "Need": 1
+      },
+      "resourceB": {
+        "Max": 2,
+        "Allocation": 0,
+        "Need": 2
+      },
+      "resourceC": {
+        "Max": 2,
+        "Allocation": 0,
+        "Need": 2
+      }
+    },
+    {
+      "name": "p2",
+      "resourceA": {
+        "Max": 9,
+        "Allocation": 3,
+        "Need": 6
+      },
+      "resourceB": {
+        "Max": 0,
+        "Allocation": 0,
+        "Need": 0
+      },
+      "resourceC": {
+        "Max": 2,
+        "Allocation": 1,
+        "Need": 1
+      }
+    },
+    {
+      "name": "p3",
+      "resourceA": {
+        "Max": 2,
+        "Allocation": 2,
+        "Need": 0
+      },
+      "resourceB": {
+        "Max": 2,
+        "Allocation": 1,
+        "Need": 1
+      },
+      "resourceC": {
+        "Max": 2,
+        "Allocation": 1,
+        "Need": 1
+      }
+    },
+    {
+      "name": "p4",
+      "resourceA": {
+        "Max": 4,
+        "Allocation": 0,
+        "Need": 4
+      },
+      "resourceB": {
+        "Max": 3,
+        "Allocation": 0,
+        "Need": 3
+      },
+      "resourceC": {
+        "Max": 3,
+        "Allocation": 2,
+        "Need": 1
+      }
+    }
+  ],
+  "Available": {
+    "A": 3,
+    "B": 3,
+    "C": 2
+  }
+}
