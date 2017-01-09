@@ -31,3 +31,7 @@ Go语言圣经书中习题
 
   - [ ] 8.1 **[bug]** Exercise 8.1 can not get a correct time at each location
             (8.1中无法正常转换各个时区的时间)
+
+- Ch 9
+
+  -[x] 9.1 
